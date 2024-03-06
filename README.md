@@ -19,6 +19,21 @@ dependencies {
 ```
 
 ## Admob
+> Confix manifest
+```gradle
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+```
+```gradle
+ <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+```
+> Dependencies google ads
+```gradle
+implementation ("com.google.android.gms:play-services-ads:22.4.0")
+```
+
 > AppOpenAd(AOA)
 ```gradle
 val aoa = AOAManager(this,"",20000,object : AOAManager.AppOpenAdsListener{
